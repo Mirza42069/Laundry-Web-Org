@@ -19,54 +19,45 @@ const terms = [
 
 export default function TermsPage() {
   return (
-    <main className="relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-36 right-[-10%] h-72 w-72 rounded-full bg-primary/25 blur-3xl" />
-        <div className="absolute bottom-[-12%] left-[-6%] h-64 w-64 rounded-full bg-[oklch(0.78_0.08_247/0.3)] blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.65),transparent_45%),radial-gradient(circle_at_75%_20%,_rgba(255,200,160,0.35),transparent_55%),radial-gradient(circle_at_20%_80%,_rgba(140,180,255,0.22),transparent_60%)]" />
-      </div>
-
-      <div className="relative mx-auto flex min-h-screen w-full max-w-5xl flex-col gap-12 px-6 py-10 sm:py-14 lg:py-20">
-        <header className="flex flex-col gap-3 text-xs uppercase tracking-[0.24em] text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex flex-wrap items-center gap-3">
+    <main className="min-h-screen">
+      <div className="mx-auto flex w-full max-w-3xl flex-col gap-10 px-6 py-10 sm:py-14 lg:py-20">
+        <header className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-4">
             <Link
               href="/"
-              className="rounded-full bg-primary px-3 py-1 text-[10px] font-semibold tracking-[0.2em] text-primary-foreground shadow-sm transition-transform duration-200 hover:-translate-y-0.5"
+              className="rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
               Kembali
             </Link>
             <Link
               href="/"
-              className="font-display text-lg normal-case tracking-normal text-foreground"
+              className="text-lg font-semibold text-foreground"
             >
               FreshWash
             </Link>
           </div>
-          <span className="text-[11px] tracking-[0.2em] sm:text-xs">
-            Syarat & ketentuan
+          <span className="text-sm text-muted-foreground">
+            Syarat & Ketentuan
           </span>
         </header>
 
-        <section className="space-y-5">
-          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-            Dokumen resmi
-          </p>
-          <h1 className="font-display text-4xl text-foreground sm:text-5xl">
-            Syarat & ketentuan layanan FreshWash.
+        <section className="space-y-4">
+          <h1 className="text-3xl font-bold text-foreground sm:text-4xl">
+            Syarat & Ketentuan
           </h1>
-          <p className="text-base text-muted-foreground sm:text-lg">
-            Dibuat agar proses laundry tetap nyaman, aman, dan jelas untuk
-            pelanggan dan tim kami.
+          <p className="text-muted-foreground">
+            Ketentuan layanan FreshWash Laundry. Dibuat agar proses laundry
+            tetap nyaman, aman, dan jelas untuk pelanggan dan tim kami.
           </p>
-          <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
             <span>Terakhir diperbarui: Januari 2026</span>
-            <Link href="/pricing" className="underline">
+            <Link href="/pricing" className="text-primary hover:underline">
               Lihat detail harga
             </Link>
           </div>
         </section>
 
-        <section className="rounded-3xl border border-border/70 bg-card/80 p-6 shadow-sm backdrop-blur">
+        <section className="rounded-2xl border border-border bg-white p-6 sm:p-8">
           <ol className="list-decimal space-y-4 pl-5 text-sm text-muted-foreground">
             {terms.map((term) => (
               <li key={term} className="leading-relaxed">
@@ -76,9 +67,9 @@ export default function TermsPage() {
           </ol>
         </section>
 
-        <WhatsAppCta className="mt-2" />
+        <WhatsAppCta />
 
-        <footer className="flex flex-col justify-between gap-3 border-t border-border/70 pt-6 text-xs text-muted-foreground sm:flex-row">
+        <footer className="flex flex-col justify-between gap-3 border-t border-border pt-6 text-sm text-muted-foreground sm:flex-row">
           <span>FreshWash Laundry · Bandung</span>
           <span>Self-service & laundry kiloan tersedia.</span>
         </footer>

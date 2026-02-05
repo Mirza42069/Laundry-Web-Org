@@ -31,28 +31,28 @@ function WhatsAppCta({
     <section
       aria-labelledby="whatsapp"
       className={cn(
-        "grid gap-6 rounded-3xl border border-border/70 bg-card/80 px-6 py-10 shadow-sm backdrop-blur sm:px-10",
+        "rounded-2xl border border-border bg-white p-6 sm:p-8",
         className
       )}
     >
       <div className="space-y-3">
-        <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+        <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
           {eyebrow}
         </p>
         <h2
           id="whatsapp"
-          className="font-display text-3xl text-foreground sm:text-4xl"
+          className="text-2xl font-bold text-foreground sm:text-3xl"
         >
           {title}
         </h2>
         <p className="text-sm text-muted-foreground">{description}</p>
       </div>
-      <div className="flex flex-wrap items-center gap-3">
+      <div className="mt-6">
         <a
           href={href}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition-transform duration-200 hover:-translate-y-0.5"
+          className="inline-flex items-center justify-center rounded-full bg-green-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-green-600"
         >
           {buttonLabel}
         </a>
